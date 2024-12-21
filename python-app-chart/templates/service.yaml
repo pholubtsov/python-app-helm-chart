@@ -1,0 +1,14 @@
+# Service
+apiVersion: v1
+kind: Service
+metadata:
+    name: service-{{ .Release.Name }}
+    namespace: {{ .Values.namespace }}
+spec:
+    selector:
+        app: {{ .Release.Name }}
+    ports:
+        - name: {{ .Release.Name }}-listener
+          protocol: TCP
+          port: 5050
+          targetPort: 5000

@@ -1,0 +1,7 @@
+
+replicas: 3
+
+namespace: prod
+
+container:
+  image: pholubtsov1/python-api:latest

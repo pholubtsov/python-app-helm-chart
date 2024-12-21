@@ -1,0 +1,7 @@
+
+replicas: 2
+
+namespace: stage
+
+container:
+  image: pholubtsov1/python-api:latest
